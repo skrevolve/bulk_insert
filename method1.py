@@ -34,7 +34,7 @@ for i in range(TOTAL // SUB):
         for x in range(SUB)
     ]
 
-    session.bulk_save_objects(objects)
-    session.commit()
+session.bulk_save_objects(objects)
+session.commit()
 
-    print(f'{(i + 1) * SUB} / {TOTAL}')
+print(f'{(i + 1) * SUB} / {TOTAL}')
