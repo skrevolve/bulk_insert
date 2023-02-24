@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 from random import randint
-
 from sqlalchemy import create_engine, Integer, Column, VARCHAR
 from sqlalchemy.engine import URL
 from sqlalchemy.orm import declarative_base, sessionmaker
@@ -17,12 +16,11 @@ url = URL.create(
 engine = create_engine(url)
 Base = declarative_base()
 
-class Rank(Base):
-    __tablename__ = 'updown'
-
-    id = Column(Integer, primary_key=True)
-    wallet_addr = Column(VARCHAR(200), index=True)
-    point = Column(Integer, index=True)
+class Table(Base):
+    __tablename__ = 'myTable'
+    primary_key = Column(Integer, primary_key=True)
+    col_name1 = Column(VARCHAR(200), index=True)
+    col_name2 = Column(Integer, index=True)
 
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -32,7 +30,7 @@ SUB = 500000
 
 for i in range(TOTAL // SUB):
     objects = [
-        Rank(wallet_addr=str(i * SUB * x), point=randint(0, 100000000))
+        Table(col_name1=str(i * SUB * x), col_name2=randint(0, 100000000))
         for x in range(SUB)
     ]
 

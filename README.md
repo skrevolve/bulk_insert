@@ -27,6 +27,11 @@
     # 👇️ for Jupyter Notebook
     $ !pip install pyodbc
 
+## prepare
+>
+    $ pip install pyodbc
+    $ pip install pandas
+
 ## zsh config
 >
     # 👇️ search python path
