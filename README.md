@@ -1,5 +1,6 @@
 # bulk_insert
 
+## isntall python
 >
     # 👇️ in a virtual environment or using Python 2
     pip install pyodbc
@@ -26,6 +27,7 @@
     # 👇️ for Jupyter Notebook
     !pip install pyodbc
 
+## zsh config
 >
     which python3
 
