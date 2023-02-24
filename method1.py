@@ -23,6 +23,7 @@ class Rank(Base):
     id = Column(Integer, primary_key=True)
     wallet_addr = Column(VARCHAR(200), index=True)
     point = Column(Integer, index=True)
+
 Session = sessionmaker(bind=engine)
 session = Session()
 
