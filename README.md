@@ -29,14 +29,17 @@
 
 ## zsh config
 >
+    # 👇️ search python path
     $ which python3
 
 >
-    #insert -> alias python="which python3 result path"
+    # 👇️ insert -> alias python="which python3 result path"
     $ vi ~/.zshrc
 
 >
+    # 👇️ reset zshrc
     $ source ~/.zshrc
 
 >
+    # 👇️ check version
     $ python --version
