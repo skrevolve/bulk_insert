@@ -37,4 +37,4 @@ for i in range(TOTAL // SUB):
 session.bulk_save_objects(objects)
 session.commit()
 
-print(f'{(i + 1) * SUB} / {TOTAL}')
+print(f'{(i + 1) * SUB} done/ {TOTAL} max')
